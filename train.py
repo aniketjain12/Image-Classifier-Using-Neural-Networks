@@ -176,7 +176,7 @@ def train(data_dir, save_dir= os.path.dirname(os.path.abspath(__file__)), arch= 
                         accuracy += torch.mean(equals.type(torch.FloatTensor)).item()
                     
                 print(f"Epoch {epoch+1}/{epoch}.."
-                     f"Validation loss: {running_loss/print_every:.3f}.."
+                     f"Train loss: {running_loss/print_every:.3f}.."
                     f"Validation loss: {test_loss/len(validationloader):.3f}.."
                     f"Validation accuracy: {accuracy/len(validationloader):.3f}..")
             
